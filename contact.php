@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Contact</title>
-<style>
- .partner{
 
-    width:200px;
-    text-align:center;
-    padding-top:20px;
- }
- .body{
-    background-repeat: no-repeat;
-    width:100%
-    height:100%;
- }
-</style>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Contact Us</title>
 </head>
 
-<body class="body" background="contact_us_wallpaper.jpg">
-<center>
-<div>
-<h5>CONTACT US</h5>
-</div>
-<body style="padding-bottom:1000px">
-<div>
-    <div class="main-div" style="
-        display:grid;
-        grid-template-columns: 400px 400px;
-        height:300px;
-        padding-left:400px;">
-        <div class="div1" style="
-        ">
-           
-            <img src="priyanshu.jpg" class="partner">
-            <p>PRIYANSHU SINGH</p>
-            <p>9798766675</p>
-        </div>
-        <div class="div2" style="
-        background-color:pink;">
-            div2<p>text</p>
+<body>
+    <div class="container">
+        <h1 class="text-center">Contact Us</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="priyanshu.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Priyanshu Singh</h5>
+                        <p class="card-text">Email: priyanshu@example.com</p>
+                        <p class="card-text">Phone: 555-555-5555</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="sagnik.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Sagnik Sarkar</h5>
+                        <p class="card-text">Email: sagnik@example.com</p>
+                        <p class="card-text">Phone: 555-555-5555</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</center>
 </body>
 
 </html>

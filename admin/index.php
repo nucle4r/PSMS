@@ -24,34 +24,67 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 
 ?>
 
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>Login Form</title>
-  </head>
-  <body>
-    <div class="container h-100 d-flex justify-content-center align-items-center">
-      <form action="index.php" method="post">
-        <div class="text-center mb-4">
-          <h1 class="h3 mb-3 font-weight-normal">Admin Login</h1>
-        </div>
-        <div class="form-group">
-          <label for="email">email:</label>
-          <input type="text" class="form-control" id="email" name="email" placeholder="Enter email" autocomplete="off">
-        </div>
-        <div class="form-group">
-          <label for="password">Password:</label>
-          <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" autocomplete="off">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <div class="row">
-        <p>Not Admin?</p> <a href="../customer/index.php">. Sign in as Customer </a>
-      </div>
-      </form>
-      <?php if(isset($error)): ?>
-        <div class="text-danger mt-3"><?= $error ?></div>
-      <?php endif; ?>
-    </div>
-  </body>
+  	<title>Login Admin - PSMS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">PET STORE MANAGEMENT SYSTEM</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-5">
+					<div class="login-wrap p-4 p-md-5">
+		      	<div class="icon d-flex align-items-center justify-content-center">
+		      		<span class="fa fa-user-o"></span>
+		      	</div>
+		      	<h3 class="text-center mb-4">Admin Login</h3>
+						<form action="index.php" method="post" class="login-form" autocomplete="off">
+		      		<div class="form-group">
+		      			<input type="text" class="form-control rounded-left" id="email" name="email" placeholder="Email" required>
+		      		</div>
+	            <div class="form-group d-flex">
+	              <input type="password" class="form-control rounded-left" id="password" name="password" placeholder="Password" required>
+	            </div>
+	            <div class="form-group d-md-flex">
+	            	<div class="w-50">
+	            		<label class="checkbox-wrap checkbox-primary">Remember Me
+									  <input type="checkbox" checked>
+									  <span class="checkmark"></span>
+									</label>
+								</div>
+								<div class="w-50 text-md-right">
+									<a href="../customer/index.php">Sign up as Customer</a>
+								</div>
+	            </div>
+	            <div class="form-group">
+	            	<button type="submit" class="btn btn-primary rounded submit p-3 px-5">LOGIN</button>
+	            </div>
+	          </form>
+	        </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
 </html>

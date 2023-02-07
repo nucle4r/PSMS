@@ -7,35 +7,35 @@ if (!isset($_SESSION['admin'])) {
     exit;
 }
 
-// Get the count of inventory
-// $query = "SELECT COUNT(*) as inventory_count FROM inventory";
-// $result = mysqli_query($conn, $query);
-// $inventory_count = mysqli_fetch_assoc($result)['inventory_count'];
+//Get the count of inventory
+$query = "SELECT COUNT(*) as inventory_count FROM inventory";
+$result = mysqli_query($conn, $query);
+$inventory_count = mysqli_fetch_assoc($result)['inventory_count'];
 
-// // Get the count of products
-// $query = "SELECT COUNT(*) as product_count FROM products";
-// $result = mysqli_query($conn, $query);
-// $product_count = mysqli_fetch_assoc($result)['product_count'];
+// Get the count of pets
+$query = "SELECT COUNT(*) as pet_count FROM pets";
+$result = mysqli_query($conn, $query);
+$pet_count = mysqli_fetch_assoc($result)['pet_count'];
 
-// // Get the count of customers
-// $query = "SELECT COUNT(*) as customer_count FROM customers";
-// $result = mysqli_query($conn, $query);
-// $customer_count = mysqli_fetch_assoc($result)['customer_count'];
+// Get the count of users
+$query = "SELECT COUNT(*) as user_count FROM users";
+$result = mysqli_query($conn, $query);
+$user_count = mysqli_fetch_assoc($result)['user_count'];
 
-// // Get the count of orders
-// $query = "SELECT COUNT(*) as order_count FROM orders";
-// $result = mysqli_query($conn, $query);
-// $order_count = mysqli_fetch_assoc($result)['order_count'];
+// Get the count of orders
+$query = "SELECT COUNT(*) as order_count FROM orders";
+$result = mysqli_query($conn, $query);
+$order_count = mysqli_fetch_assoc($result)['order_count'];
 
-// // Get the total quantity of all products
-// $query = "SELECT SUM(quantity) as total_quantity FROM inventory";
-// $result = mysqli_query($conn, $query);
-// $total_quantity = mysqli_fetch_assoc($result)['total_quantity'];
+// Get the total quantity of all pets
+$query = "SELECT SUM(quantity) as total_quantity FROM inventory";
+$result = mysqli_query($conn, $query);
+$total_quantity = mysqli_fetch_assoc($result)['total_quantity'];
 
-// // Get the total revenue from orders
-// $query = "SELECT SUM(total_price) as total_revenue FROM orders";
-// $result = mysqli_query($conn, $query);
-// $total_revenue = mysqli_fetch_assoc($result)['total_revenue'];
+// Get the total revenue from orders
+$query = "SELECT SUM(total_price) as total_revenue FROM orders";
+$result = mysqli_query($conn, $query);
+$total_revenue = mysqli_fetch_assoc($result)['total_revenue'];
 
 ?>
 
@@ -75,16 +75,16 @@ if (!isset($_SESSION['admin'])) {
                         <div class="col-sm-3">
                             <div class="card text-white bg-success h-100">
                                 <div class="card-body">
-                                    <h5 class="card-title">Products</h5>
-                                    <p class="card-text">Total count: <?php echo $product_count; ?></p>
+                                    <h5 class="card-title">Pets</h5>
+                                    <p class="card-text">Total count: <?php echo $pet_count; ?></p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="card text-white bg-warning h-100">
                                 <div class="card-body">
-                                    <h5 class="card-title">Customers</h5>
-                                    <p class="card-text">Total count: <?php echo $customer_count; ?></p>
+                                    <h5 class="card-title">Users</h5>
+                                    <p class="card-text">Total count: <?php echo $user_count; ?></p>
                                 </div>
                             </div>
                         </div>

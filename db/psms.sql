@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2023 at 04:57 PM
+-- Generation Time: Jan 19, 2023 at 03:51 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -108,6 +108,26 @@ INSERT INTO `orders` (`oid`, `user_id`, `pet_id`, `quantity`, `total_price`, `st
 (15, 6, 7, 1, 10, 'LIVE', '2023-01-15'),
 (16, 6, 7, 3, 30, 'LIVE', '2023-01-15'),
 (17, 7, 1, 1, 500, 'CANCELED', '2023-01-15');
+
+--
+-- Triggers `orders`
+--
+DELIMITER $$
+CREATE TRIGGER `update_inventory_on_cancel` AFTER UPDATE ON `orders` FOR EACH ROW BEGIN
+    IF NEW.status = 'CANCELLED' THEN
+        UPDATE inventory SET quantity = quantity + OLD.quantity
+        WHERE pet_id = OLD.pet_id;
+    END IF;
+END
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `update_inventory_on_order` AFTER INSERT ON `orders` FOR EACH ROW BEGIN
+    UPDATE inventory SET quantity = quantity - NEW.quantity
+    WHERE pet_id = NEW.pet_id;
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
