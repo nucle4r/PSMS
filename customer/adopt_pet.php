@@ -15,9 +15,6 @@ if (isset($_POST['quantity'])) {
     $query = "INSERT INTO orders (user_id, pet_id, quantity, total_price) VALUES ('$user_id', '$pet_id', '$quantity', '$total_price')";
     mysqli_query($conn, $query);
 
-    $query2 = "UPDATE inventory SET quantity = quantity - $quantity WHERE id='$inventory_id'";
-    mysqli_query($conn, $query2);
-
     // Redirect to the orders page
     header('Location: home.php');
 }

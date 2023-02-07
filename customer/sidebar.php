@@ -10,16 +10,16 @@
                     <i class="fa-solid fa-dog"></i>
                     Shop Pets
                 </a>
-            </li>              
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="view_orders.php">
-                <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping"></i>
                     My Orders
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="logout.php">
-                <i class="fa-solid fa-right-from-bracket"></i>
+                    <i class="fa-solid fa-right-from-bracket"></i>
                     Logout
                 </a>
             </li>
