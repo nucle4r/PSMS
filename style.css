@@ -1,0 +1,165 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+nav {
+	position: fixed;
+	background-color: rgb(243, 164, 53);
+	height: 70px;
+	width: 100%;
+	z-index: 1;
+}
+
+
+.logo {
+	font-size: 25px;
+	position: relative;
+	left: 5%;
+	color: white;
+	font-weight: bold;
+	line-height: 70px;
+}
+
+ul {
+	position: relative;
+	float: right;
+	margin-right: 20px;
+}
+
+ul li {
+	display: inline-block;
+	line-height: 70px;
+	margin: 0 5px;
+}
+
+ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 17px;
+}
+
+.main_img {
+	width: 100%;
+	height: 580px;
+
+}
+
+.section1 {
+	padding-top: 70px;
+}
+
+
+.img_text {
+	position: absolute;
+	top: 10%;
+	left: 30%;
+	color: rgb(206, 20, 20);
+	padding-left: 20px;
+	padding-bottom: 20px;
+	font-size: 35px;
+	font-family: Century Gothic;
+
+}
+
+.welcome_img {
+	width: 100%;
+	height: 250px;
+}
+
+.container {
+	padding-top: 70px;
+}
+
+
+.animal {
+	width: 90%;
+	height: 200px;
+}
+
+.label_text {
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	padding-right: 10px;
+	padding-bottom: 7px;
+
+}
+
+
+.input_deg {
+	width: 30%;
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid blue;
+
+}
+
+.adm_int {
+	padding-top: 10px;
+}
+
+.input_txt {
+	width: 30%;
+	height: 120px;
+	border-radius: 5px;
+	border: 1px solid blue;
+}
+
+.form_deg {
+	padding-top: 200px;
+
+}
+
+.label_deg {
+	display: inline-block;
+	color: black;
+	width: 100px;
+	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 19px;
+}
+
+
+.login_form {
+	background-color: white;
+	width: 400px;
+	padding-top: 76px;
+	padding-bottom: 70px;
+	border-radius: 10px;
+}
+
+.title_deg {
+	background-color: white;
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	width: 400px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 17px;
+	border-radius: 10px;
+}
+
+
+.body_deg {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.th {
+    background-color: #f2f2f2;
+}
